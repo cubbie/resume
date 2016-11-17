@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chris Pereira</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Press+Start+2P" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav1">
+        <%= link_to "About", root_url %> |
+        <%= link_to "Portfolio", root_url %>
+      </div>
+      <div class="logo">
+         Chris Pereira
+      </div>
+      <div class="nav2">
+        <%= link_to "Experience", root_url %> | 
+        <%= link_to "Contact", root_url %>
+      </div>
+    </header>
+
+    <%= image_tag "background.png", class: "background" %>
+    <%= yield %>
+  </body>
+</html>
