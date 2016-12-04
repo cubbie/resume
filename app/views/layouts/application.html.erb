@@ -9,21 +9,23 @@
   </head>
 
   <body>
-    <header>
-      <div class="nav1">
-        <%= link_to "About", root_url %> |
-        <%= link_to "Portfolio", root_url %>
-      </div>
-      <div class="logo">
-         <%=  link_to "Chris Pereira", root_url %>
-      </div>
-      <div class="nav2">
-        <%= link_to "Experience", root_url %> |
-        <%= link_to "Contact", root_url %>
-      </div>
-    </header>
+    <div class="page">
+      <header>
+        <div class="nav1">
+          <span class="about"><%= link_to "About", root_url %></span> |
+          <span class="portfolio"><%= link_to "Portfolio", root_url %></span>
+        </div>
+        <div class="logo">
+           <%=  link_to "Chris Pereira", root_url %>
+        </div>
+        <div class="nav2">
+          <span class="experience"><%= link_to "Experience", root_url %></span> |
+          <span class="contact"><%= link_to "Contact", root_url %></span>
+        </div>
+      </header>
 
-    <%= image_tag "background.png", class: "background" %>
-    <%= yield %>
+      <%# image_tag "background.png", class: "background" %>
+      <%= yield %>
+    </div>
   </body>
 </html>
