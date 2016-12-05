@@ -7,31 +7,30 @@ $(function(){
 
   $('.about').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-body .about');
+    var page = $('.modal-bodies .about');
     changepage(page);
   });
 
   $('.portfolio').click(function(e) {
     e.preventDefault();
-    changepage();
-    var page = $(this);
+    var page = $('.modal-bodies .portfolio');
+    changepage(page);
   });
 
   $('.experience').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-body .experience');
+    var page = $('.modal-bodies .experience');
     changepage(page);
   });
 
   $('.contact').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-body .contact');
+    var page = $('.modal-bodies .contact');
     changepage(page);
   });
 
   function changepage(page) {
-    var np = page
-    newpage = np.parents('modal-bodies')
+    var newpage = page
     currentpage = $('.is-showing')
 
     currentpage.addClass('animate-out');
