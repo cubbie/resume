@@ -7,25 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <div class="page">
-      <header>
-        <div class="nav1">
-          <span class="about"><%= link_to "About", root_url %></span> |
-          <span class="portfolio"><%= link_to "Portfolio", root_url %></span>
-        </div>
-        <div class="logo">
-           <%=  link_to "Chris Pereira", root_url %>
-        </div>
-        <div class="nav2">
-          <span class="experience"><%= link_to "Experience", root_url %></span> |
-          <span class="contact"><%= link_to "Contact", root_url %></span>
-        </div>
-      </header>
-
-      <%# image_tag "background.png", class: "background" %>
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
