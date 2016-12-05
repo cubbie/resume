@@ -7,25 +7,25 @@ $(function(){
 
   $('.about').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-bodies .about');
+    var page = $('.modal-bodies .about-page');
     changepage(page);
   });
 
   $('.portfolio').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-bodies .portfolio');
+    var page = $('.modal-bodies .portfolio-page');
     changepage(page);
   });
 
   $('.experience').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-bodies .experience');
+    var page = $('.modal-bodies .experience-page');
     changepage(page);
   });
 
   $('.contact').click(function(e) {
     e.preventDefault();
-    var page = $('.modal-bodies .contact');
+    var page = $('.modal-bodies .contact-page');
     changepage(page);
   });
 
