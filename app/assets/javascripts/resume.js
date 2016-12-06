@@ -38,11 +38,11 @@ $(function(){
     setTimeout(function(){
       currentpage.removeClass('animate-out is-showing').next();
       newpage.addClass('animate-in');
-    }, 600);
+    }, 400);
 
     setTimeout(function(){
       newpage.removeClass('animate-in').addClass('is-showing')
-    }, 1200)
+    }, 800)
   }
   //
   // function changepage(newpage, currentpage) {

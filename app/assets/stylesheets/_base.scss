@@ -14,13 +14,19 @@
  *= require_self
  */
 
+// * {
+//   margin: 0;
+// }
+* {
+  box-sizing: border-box;
+}
  a {
    color: #FFFFFF;
    text-decoration: none;
  }
 
 body {
-  background-color: rgb(26,26,26);
+  background: rgb(45,45,45);
 }
 
 header {
@@ -29,6 +35,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+img {
+  width: 100%
+}
+
+p {
+  margin: 0
 }
 
 .background {
