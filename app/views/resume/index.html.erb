@@ -1,46 +1,26 @@
-<div class="page">
-  <header>
-    <div class="nav1">
-      <span class="about"><%= link_to "About", root_url %></span> |
-      <span class="portfolio"><%= link_to "Portfolio", root_url %></span>
+<div class="resume">
+  <div class="home-page">
+    <div class="title">
+      <h1 class="name">Chris Pereira</h1>
+        <p class="subheader">Full Stack Web Developer</p>
+        <p class="city">Toronto, Ontario</p>
     </div>
-    <div class="logo">
-       <%=  link_to "Chris Pereira", root_url %>
-    </div>
-    <div class="nav2">
-      <span class="experience"><%= link_to "Experience", root_url %></span> |
-      <span class="contact"><%= link_to "Contact", root_url %></span>
-    </div>
-  </header>
+  </div>
 
-  <div class="modal-bodies">
-    <div class="about-page modal-body is-showing">
-      <%= image_tag "uglyme.jpg", class: 'image' %>
-      <p class="about-me">
-        I’m a motivated developer with a background as a mechanic. I enjoy the hands on approach when it comes to building (and fixing) interesting and exciting things.
-      </p>
-    </div>
-    <div class="portfolio-page modal-body">
-      <p class="pf1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p class="pf2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p class="pf3">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p class="pf4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="experience-page modal-body">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="contact-page modal-body">
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </div>
+  <div class="about-page">
+    <p class="about-me">A front leaning full stack web developer. Currently residing in Toronto, Ontario. Having recently completed a 9 week imersive course at Bitmaker Labs (General Assembly), I'm looking to put what I've learned to use.
+      I'm a movie lover, game enthusiast and coffee addict. </p>
+  </div>
+
+  <div class="portfolio-page">
+  </div>
+
+  <div class="contact-page">
+    <%= form_tag email_path, method: :post, class: "email" do %>
+      <%= text_field, placeholder: 'Name...' %>
+      <%= text_field, placeholder: 'Email...' %>
+      <%= text_area, placeholder: 'Name...' %>
+      <%= submit_tag "Send" %> 
+    <% end %>
   </div>
 </div>

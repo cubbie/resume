@@ -1,98 +1,36 @@
 $(function(){
 
-  $('header').animate({ opacity: 1 }, 2500);
-
-
-  $('.modal-bodies').animate({ opacity: 1 }, 2500);
-
-  $('.about').click(function(e) {
-    e.preventDefault();
-    var page = $('.modal-bodies .about-page');
-    changepage(page);
+  $(".home-button").on("click", function() {
+    $('html, body').animate({
+        scrollTop: $(".home-page").offset().top
+    }, 200);
+    $('.sb').css('background-color', 'rgb(25,25,25)');
+    $(".home-button").css('background-color', '#412F57');
   });
 
-  $('.portfolio').click(function(e) {
-    e.preventDefault();
-    var page = $('.modal-bodies .portfolio-page');
-    changepage(page);
+  $(".about-button").on("click", function() {
+    $('html, body').animate({
+        scrollTop: $(".about-page").offset().top
+    }, 200);
+    $('.sb').css('background-color', 'rgb(25,25,25)');
+    $(".about-button").css('background-color', '#412F57');
   });
 
-  $('.experience').click(function(e) {
-    e.preventDefault();
-    var page = $('.modal-bodies .experience-page');
-    changepage(page);
+  $(".portfolio-button").on("click", function() {
+    $('html, body').animate({
+        scrollTop: $(".portfolio-page").offset().top
+    }, 200);
+    $('.sb').css('background-color', 'rgb(25,25,25)');
+    $(".portfolio-button").css('background-color', '#412F57');
   });
 
-  $('.contact').click(function(e) {
-    e.preventDefault();
-    var page = $('.modal-bodies .contact-page');
-    changepage(page);
+  $(".contact-button").on("click", function() {
+    $('html, body').animate({
+        scrollTop: $(".contact-page").offset().top
+    }, 200);
+    $('.sb').css('background-color', 'rgb(25,25,25)');
+    $(".contact-button").css('background-color', '#412F57');
   });
 
-  function changepage(page) {
-    var newpage = page
-    currentpage = $('.is-showing')
 
-    currentpage.addClass('animate-out');
-    // animate the page in
-    setTimeout(function(){
-      currentpage.removeClass('animate-out is-showing').next();
-      newpage.addClass('animate-in');
-    }, 400);
-
-    setTimeout(function(){
-      newpage.removeClass('animate-in').addClass('is-showing')
-    }, 800)
-  }
-  //
-  // function changepage(newpage, currentpage) {
-  //   console.log('new page');
-  //   // animate the page out
-  //               .
-  //
-  // }
-
-  // $('.about').on('click', function(e) {
-  //   e.preventDefault();
-  //   $.ajax({
-  //     url: 'http://localhost:3000/about',
-  //     method: "GET",
-  //     dataType: 'HTML',
-  //   }).done(function(responseData) {
-  //     $('.info-window').html(responseData);
-  //   });
-  // });
-  //
-  // $('.contact').on('click', function(e) {
-  //   e.preventDefault();
-  //   $.ajax({
-  //     url: 'http://localhost:3000/contact',
-  //     method: "GET",
-  //     dataType: 'HTML',
-  //   }).done(function(responseData) {
-  //     $('.info-window').html(responseData);
-  //   });
-  // });
-  //
-  // $('.experience').on('click', function(e) {
-  //   e.preventDefault();
-  //   $.ajax({
-  //     url: 'http://localhost:3000/experience',
-  //     method: "GET",
-  //     dataType: 'HTML',
-  //   }).done(function(responseData) {
-  //     $('.info-window').html(responseData);
-  //   });
-  // });
-  //
-  // $('.portfolio').on('click', function(e) {
-  //   e.preventDefault();
-  //   $.ajax({
-  //     url: 'http://localhost:3000/portfolio',
-  //     method: "GET",
-  //     dataType: 'HTML',
-  //   }).done(function(responseData) {
-  //     $('.info-window').html(responseData);
-  //   });
-  // });
 });

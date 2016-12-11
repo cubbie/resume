@@ -3,11 +3,25 @@
   <head>
     <title>Chris Pereira</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Press+Start+2P|Bungee+Hairline|Ubuntu+Condensed" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <div class="sidebar">
+      <div class="home-button sb">
+        Home
+      </div>
+      <div class="about-button sb">
+        About
+      </div>
+      <div class="portfolio-button sb">
+        Portfolio
+      </div>
+      <div class="contact-button sb">
+        Contact
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
