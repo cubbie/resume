@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   root 'resume#index'
 
-  post '/' => 'resume#index', as: :email
+  post '/' => 'resume#email', as: :email
 
 end
