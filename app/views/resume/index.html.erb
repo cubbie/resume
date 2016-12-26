@@ -1,5 +1,5 @@
 <div class="resume">
-  <div class="home-page">
+  <div class="home-page page">
     <div class="title">
       <h1 class="name">Chris Pereira</h1>
         <p class="subheader">Full Stack Web Developer</p>
@@ -7,17 +7,17 @@
     </div>
   </div>
 
-  <div class="about-page">
+  <div class="about-page page">
     <%= image_tag "me_converted.png", class: "picture" %>
     <p class="about-me">A front leaning full stack web developer. Currently residing in Toronto, Ontario. Recently completed a 9 week immersive course at Bitmaker Labs (General Assembly). I speak Ruby, Rails, SASS, JavaScript and PostgresSQL.
       I'm a movie lover, game enthusiast and coffee addict. </p>
   </div>
 
-  <div class="portfolio-page">
+  <div class="portfolio-page page">
     <h1>Coming Soon.</h1>
   </div>
 
-  <div class="contact-page">
+  <div class="contact-page page">
     <div class="contact-info">
       <p class="hire-me">Hire Me</p>
       <p class="hm">Send an email to see if we're a good fit</p><br />
@@ -25,5 +25,12 @@
       <a href="https://ca.linkedin.com/in/chris-pereira"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></p>
       <%= link_to 'Resume', 'ChrisPereiraResume.pdf', class: 'resume' %>
     </div>
+    <%# % form_for ContactForm.new do |f| %>
+      <%# f.input :name, :required => false %>
+      <%# f.input :email, :required => false %>
+      <%# f.input :message, :as => :text, :required => false %>
+      <%# f.input :nickname, :hint => 'Leave this field blank!', hidden: true %>
+    <%# f.button :submit, 'Send message'%>
+    <%# end %>
   </div>
 </div>

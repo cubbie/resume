@@ -1,4 +1,4 @@
-class ResumeController < ApplicationController
+class ContactFormController < ApplicationController
 
   def new
     @contact = ContactForm.new
@@ -17,5 +17,4 @@ class ResumeController < ApplicationController
       flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
     end
   end
-
 end

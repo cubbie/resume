@@ -8,9 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://use.fontawesome.com/4355b7f354.js"></script>
   </head>
-  <body>
+  <body class="stop-scrolling">
     <div class="sidebar">
-      <div class="home-button sb">
+      <div class="home-button sb active">
         Home
       </div>
       <div class="about-button sb">
@@ -25,4 +25,5 @@
     </div>
     <%= yield %>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </html>
