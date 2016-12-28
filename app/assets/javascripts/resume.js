@@ -48,11 +48,11 @@ $(function(){
         $('.active').removeClass('active');
         $(".about-button").addClass('active');
       }
-      if (scrollDistance >= pageTwoPosition/1.8 && scrollDistance > pageThreePosition/1.5) {
+      if (scrollDistance >= pageTwoPosition/ && scrollDistance > pageThreePosition/1.5) {
         $('.active').removeClass('active');
         $(".portfolio-button").addClass('active');
       }
-      if (scrollDistance >= pageThreePosition/1.8 && scrollDistance > pageFourPosition/1.5) {
+      if (scrollDistance >= pageThreePosition/ && scrollDistance > pageFourPosition/1.5) {
         $('.active').removeClass('active');
         $(".contact-button").addClass('active');
       }
