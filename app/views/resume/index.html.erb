@@ -25,12 +25,13 @@
       <a href="https://ca.linkedin.com/in/chris-pereira"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></p>
       <%= link_to 'Resume', 'ChrisPereiraResume.pdf', class: 'resume' %>
     </div>
-    <%# % form_for ContactForm.new do |f| %>
-      <%# f.input :name, :required => false %>
-      <%# f.input :email, :required => false %>
-      <%# f.input :message, :as => :text, :required => false %>
-      <%# f.input :nickname, :hint => 'Leave this field blank!', hidden: true %>
-    <%# f.button :submit, 'Send message'%>
-    <%# end %>
+    <div class="contact-me">
+      <%= form_for :message do |f| %>
+        <%= f.text_field :name, placeholder: " Name", class:"field" %><br />
+        <%= f.email_field :email, placeholder: " Email", class:"field" %><br />
+        <%= f.text_area :content, placeholder: " Message", class: 'area' %><br />
+        <%= f.submit "Send", class: "send" %>
+      <% end %>
+    </div>
   </div>
 </div>

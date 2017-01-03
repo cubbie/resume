@@ -1,21 +1,24 @@
 class ResumeController < ApplicationController
-
   def new
-    @contact = ContactForm.new
-  end
+   @message = Message.new
+ end
 
-  def create
-    begin
-      @contact = ContactForm.new(params[:contact_form])
-      @contact.request = request
-      if @contact.deliver
-        flash.now[:notice] = 'Thank you for your message!'
-      else
-        render :new
-      end
-    rescue ScriptError
-      flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
-    end
-  end
+ def create
+   @message = Message.new(message_params)
 
+   if @message.valid?
+     MessageMailer.new_message(@message).deliver
+     redirect_to root_path, notice: "Your messages has been sent."
+   else
+     flash[:alert] = "An error occurred while delivering this message."
+     render :new
+   end
+ end
+
+private
+
+ def message_params
+  #  byebug
+   params.require(:message).permit(:name, :email, :content)
+ end
 end
