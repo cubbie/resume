@@ -2,7 +2,7 @@ class ResumeController < ApplicationController
   def new
    @message = Message.new
  end
-
+ 
  def create
    @message = Message.new(message_params)
 
@@ -18,7 +18,6 @@ class ResumeController < ApplicationController
 private
 
  def message_params
-  #  byebug
    params.require(:message).permit(:name, :email, :content)
  end
 end

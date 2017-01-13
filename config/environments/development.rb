@@ -52,12 +52,14 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # SMTP settings for gmail
+  # SMTP settings for sendgrid
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
    :address              => "smtp.sendgrid.net",
-   :port                 => 587,
-   :user_name            => ENV['gmail_username'],
-   :password             => ENV['gmail_password'],
+   :port                 => '587',
+   :user_name            => 'apikey',
+   :password             => "#{ENV['gmail_password']}",
+   :openssl_verify_mode  => 'none'
   }
 end
