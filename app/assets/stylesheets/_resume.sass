@@ -1,23 +1,22 @@
-.home-page
-  color: rgb(255,255,255)
-  height: 100vh
-  width: 100%
-  background: url('footer_lodyas.png')
+.homepage
+  display: flex
+  justify-content: space-around
+  align-items: flex-end
+  height: 50vh
+  flex-direction: row
+  flex-wrap: wrap
 
   .title
-    position: relative
     width: 520px
-    left: 20%
-    top: 35vh
 
     .name
-      font-family: 'Kaushan Script'
-      font-size: 80px
+      font-family: 'Lato'
+      font-size: 60px
       text-align: right
       position: relative
-      top: 100px
+      top: 1vh
       opacity: 0
-      animation: slideup 1s ease-in 0s 1
+      animation: slideup 0.5s ease-in 0s 1
       animation-fill-mode: forwards
 
     .subheader
@@ -25,73 +24,35 @@
       font-family: 'Bungee Hairline'
       font-size: 30px
       text-align: right
-      animation: slidein 0.5s ease-in 1s 1
+      animation: slidein 0.3s ease-in 0.4s 1
       animation-fill-mode: forwards
       position: relative
-      right: 100px
       opacity: 0
 
     .city
       font-weight: bold
       text-align: right
       font-family: 'Bungee Hairline'
-      animation: slidein 0.5s ease-in 1s 1
+      animation: slidein 0.3s ease-in 0.4s 1
       animation-fill-mode: forwards
       position: relative
-      right: 100px
       opacity: 0
 
-.about-page
-  height: 100vh
-  width: 100vw
-  background: url('shattered_@2X.png')
-  display: flex
-  flex-direction: column
+  .shipcontainer
+    width: 75px
+    height: 150px
+    position: relative
+    right: 20vw
+    // border-bottom: 2px solid black
 
+    .rocketship
+      margin: 0 100px
+      animation: wiggle 10s ease-in-out 0s infinite
 
-.portfolio-page
-  height: 100vh
-  width: 100vw
-  background: url('escheresque_ste_@2X.png')
-  display: flex
-  justify-content: space-around
-  align-items: center
-  flex-direction: row
+.contact-info
+  text-align: center
+  margin-top: 300px
 
-  .chevron
-    color: white
-    font-size: 40px
-
-  .portfolio-container
-    overflow: hidden
-    color: white
-    display: flex
-    justify-content: space-around
-    align-items: center
-    flex-wrap: wrap
-    flex-direction: row
-
-  .project-container
-    display: flex
-    justify-content: space-around
-    align-items: center
-    flex-direction: row
-    flex-wrap: wrap
-    width: 800px
-
-    .project-picture
-      width: 300px
-      height: auto
-
-    .project-description
-      width: 400px
-      color: white
-      font-size: 20px
-      font-family: 'Overpass'
-
-.contact-page
-  height: 100vh
-  width: 100vw
-  background: linear-gradient(to top, #948E99, #2E1437)
-  display: flex
-  align-content: center
+  .icons
+    color: black
+    font-size: 50px
